@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Counting Counters</title>
+  </head>
+  <body>
+    <h1>Counter Assignment (Click the buttons)</h1>
+    <p id="count">0 </p>
+	
+    <button id="subtract">--</button>
+    <button id="add">+</button>
+	
+    <script>
+      // Put a Count element onto the page
+      const countElement = document.getElementById("count");
+
+      // Set the starting count to 0
+      let count = 0;
+
+      // Put a Subtract button onto the page
+      const subtractButton = document.getElementById("subtract");
+	  
+      // Put an Add button onto the page
+      const addButton = document.getElementById("add");
+
+      // Add an event listener for when Add is clicked
+      addButton.addEventListener("click", () => {
+        count++;
+        countElement.innerText = count;
+      });
+
+      // Add an event listener for when Subtract is clicked
+      subtractButton.addEventListener("click", () => {
+        count--;
+        countElement.innerText = count;
+      });
+    </script>
+	
+  </body>
+  
+</html>
